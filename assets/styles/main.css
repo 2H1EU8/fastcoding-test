@@ -1,6 +1,7 @@
-@layer base, layout, components, tokens;
+/* author: @2h1eu8  */
+@layer tokens, base, layout, components;
 
+@import url(./tokens.css) layer(tokens);
 @import url(./base.css) layer(base);
 @import url(./layout.css) layer(layout);
 @import url(./components.css) layer(components);
-@import url(./tokens.css) layer(tokens);
