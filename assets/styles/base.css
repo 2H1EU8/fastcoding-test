@@ -7,6 +7,7 @@
 
 *:not(dialog) {
   margin: 0;
+  padding: 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -19,9 +20,10 @@ body {
   line-height: 1.5;
   /* Improve text rendering */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Nunito", sans-serif;
 }
 
-/* 6. Improve media defaults */
 img,
 picture,
 svg {
@@ -57,4 +59,10 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
+}
+
+link,
+a {
+  text-decoration: none;
+  color: inherit;
 }
