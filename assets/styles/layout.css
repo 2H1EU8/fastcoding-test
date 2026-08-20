@@ -516,6 +516,173 @@
   }
 }
 
+/* Rating Clarity */
+.rating-ctn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 7.5rem;
+}
+
+.rating-ctn .rating-left {
+  position: relative;
+  width: 75%;
+}
+
+.rating-ctn .rating-left .rating-img {
+  width: 340px;
+  height: 527px;
+  background-color: var(--primary-gray);
+  position: absolute;
+  bottom: 0;
+}
+
+.rating-left .rating-img-float {
+  top: -19%;
+  right: -39%;
+}
+
+.rating-left .rating-star {
+  position: absolute;
+  top: -2.5%;
+  right: -15%;
+  background-color: var(--dark);
+  width:120px;
+  height: 120px;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating-star .rating-score {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--primary-light);
+}
+
+.rating-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 5.125rem;
+}
+
+.rating-right .rating-text > .section-description {
+  margin-top: 25px;
+  max-width: 80%;
+}
+
+.rating-list {
+  width: 80%;
+}
+
+.rating-list .rating-item {
+  display: flex;
+  gap: 20px;
+  padding: 15px 82px 12px 6px;
+}
+
+.rating-item .item-info > .item-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: -1%;
+  color: var(--dark);
+}
+
+.rating-item .item-info > .item-description {
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: -1%;
+  color: var(--description-gray);
+  height: 56px;
+  margin-top: 14px;
+}
+
+/* Responsive Rating - Mobile */
+@media (max-width: 47.999rem) {
+  .rating-ctn {
+    gap: 32px;
+    padding-bottom: 3rem;
+  }
+
+  .rating-ctn .rating-left {
+    width: 100%;
+    height: clamp(325px, calc(100vw + 15px), 440px);
+    margin-top: 1.5rem;
+  }
+
+  .rating-ctn .rating-left > .rating-img {
+    left: 50%;
+    bottom: 0;
+    width: min(73%, 270px);
+    height: auto;
+    aspect-ratio: 340 / 527;
+    transform: translateX(-62%);
+  }
+
+  .rating-ctn .rating-left > .rating-img > .rating-img-float {
+    top: -10%;
+    right: -28%;
+    bottom: auto;
+    width: 100%;
+    height: 100%;
+  }
+
+  .rating-ctn .rating-left .rating-star {
+    top: -0.75rem;
+    right: -0.375rem;
+    width: 88px;
+    height: 88px;
+    gap: 4px;
+  }
+
+  .rating-left .rating-star > img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .rating-right {
+    gap: 24px;
+    padding-bottom: 0;
+  }
+
+  .rating-right .rating-text > .section-description {
+    max-width: 100%;
+    margin-top: 16px;
+  }
+
+  .rating-list {
+    width: 100%;
+  }
+
+  .rating-list .rating-item {
+    align-items: flex-start;
+    gap: 14px;
+    padding: 12px 0;
+  }
+
+  .rating-list .rating-item > img {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .rating-item .item-info > .item-description {
+    height: auto;
+    margin-top: 8px;
+  }
+}
+
+@media (min-width: 48rem) {
+  .rating-ctn {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+
 /* Utilities */
 .lg-container {
   max-width: var(--lg-container);
