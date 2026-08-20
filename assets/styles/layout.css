@@ -257,13 +257,13 @@
   gap: 4px;
 }
 
-.hero-left-bottom .house-ranking {
+.house-ranking {
   display: flex;
   align-items: end;
   justify-content: center;
 }
 
-.hero-left-bottom .house-img {
+.house-img {
   width: 88px;
   height: 60px;
   padding: 4px 8px;
@@ -276,13 +276,13 @@
   cursor: pointer;
 }
 
-.hero-left-bottom .house-img-active {
+.house-img-active {
   width: 114px;
   height: 80px;
   cursor: pointer;
 }
 
-.hero-left-bottom .slider-control {
+.slider-control {
   display: flex;
   gap: 10px;
   align-items: last baseline;
@@ -308,6 +308,10 @@
   height: 2px;
   background-color: var(--dark);
   border-radius: 2px;
+}
+
+.slider-control .slider-accent::after {
+  background-color: var(--accent);
 }
 
 .slider-control .slider-pagination {
@@ -367,11 +371,11 @@
     flex-direction: row;
   }
 
-  .hero-left-bottom .house-ranking {
+ .house-ranking {
     justify-content: start;
   }
 
-  .hero-left-bottom .slider-control {
+  .slider-control {
     justify-content: start;
   }
 }
@@ -1012,6 +1016,207 @@
     gap: 8px;
     margin-top: 16px;
     touch-action: manipulation;
+  }
+}
+
+/* Sells */
+.sells {
+  padding-bottom: 7.5rem;
+}
+
+.sells .sells-ctn {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.sells-ctn .sells-left {
+  width: 100%;
+  min-width: 0;
+}
+
+.sells-left .top-about {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 74px;
+  letter-spacing: -1.5%;
+}
+
+.sells-content-title>.sells-description{
+  margin-top: 20px;
+  max-width: 80%;
+  font-size: 16px;
+}
+
+.sells-content .sells-list {
+  margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: var(--description-gray);
+}
+
+.sells-list .sells-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.sells-list .sells-info .bullet {
+  width: 15px;
+  height: 11px;
+  background-color: var(--accent);
+  flex-shrink: 0;
+}
+
+.sells-content .sells-ranking {
+  margin-top: 4.2rem;
+  display: flex;
+  gap: 17px;
+}
+
+.sells-ctn .sells-right {
+  width: 100%;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.sells-right .sells-gallery-item {
+  background-color: var(--primary-gray);
+  overflow: hidden;
+}
+
+.sells-right .sells-img-lg {
+  grid-column: 1 / -1;
+  aspect-ratio: 4 / 3;
+}
+
+.sells-right .sells-img-sm,
+.sells-right .sells-img-xs {
+  aspect-ratio: 1 / 1;
+}
+
+.sells-right .sells-gallery-item > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive Sells - Mobile */
+@media (max-width: 47.999rem) {
+  .sells {
+    padding-bottom: 3rem;
+  }
+
+  .sells-left .top-about {
+    width: fit-content;
+    gap: 6px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .sells-left .top-about > img {
+    flex: 0 0 16px;
+    width: 16px;
+    height: 18px;
+  }
+
+  .sells-content {
+    margin-top: 16px;
+  }
+
+  .sells-content-title > .sells-description {
+    max-width: 100%;
+    margin-top: 12px;
+    line-height: 24px;
+  }
+
+  .sells-content .sells-list {
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .sells-list .sells-info {
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .sells-list .sells-info .bullet {
+    width: 10px;
+    height: 8px;
+    margin-top: 8px;
+  }
+
+  .sells-list .sells-info .info {
+    min-width: 0;
+    line-height: 24px;
+  }
+
+  .sells-content .sells-ranking {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 32px;
+  }
+
+  .sells-ranking .house-ranking {
+    width: 100%;
+    max-width: 290px;
+  }
+
+  .sells-ranking .slider-control {
+    height: 44px;
+    align-items: center;
+  }
+
+  .sells-ctn .sells-right {
+    max-width: 560px;
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 48rem) {
+  .sells-ctn .sells-right {
+    height: 560px;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1.16fr) minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .sells-right .sells-img-lg {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    aspect-ratio: auto;
+  }
+
+  .sells-right .sells-img-sm {
+    grid-column: 2;
+    grid-row: 1;
+    aspect-ratio: auto;
+  }
+
+  .sells-right .sells-img-xs {
+    grid-column: 2;
+    grid-row: 2;
+    aspect-ratio: auto;
+  }
+}
+
+@media (min-width: 64rem) {
+  .sells .sells-ctn {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .sells-ctn .sells-left,
+  .sells-ctn .sells-right {
+    flex: 1;
+    width: auto;
   }
 }
 
