@@ -83,6 +83,10 @@
   letter-spacing: 0%;
 }
 
+.nav-ctn .nav-links a {
+  white-space: nowrap;
+}
+
 .nav-ctn .logo {
   width: 120px;
   height: auto;
@@ -90,9 +94,14 @@
 
 .nav-toggle {
   display: block;
+  width: 44px;
+  height: 44px;
+  margin-right: -11px;
+  padding: 0;
   background: none;
   border: none;
   cursor: pointer;
+  touch-action: manipulation;
 }
 
 .nav-toggle span {
@@ -101,7 +110,14 @@
   height: 2px;
   margin: 5px auto;
   background-color: var(--txt-link);
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.nav-toggle:focus-visible,
+.hero-btn:focus-visible,
+.nav-ctn a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
 }
 
 @media (min-width: 64rem) {
@@ -128,7 +144,6 @@
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--accent);
-  transition: all 0.3s ease;
 }
 
 .nav-btn {
@@ -148,6 +163,21 @@
 .nav-btn a:last-child:hover {
   background-color: var(--accent-hover);
   color: var(--primary-light);
+}
+
+@media (min-width: 64rem) and (max-width: 84.999rem) {
+  .nav-ctn .nav-links {
+    gap: 24px;
+    font-size: 16px;
+  }
+
+  .nav-btn {
+    gap: 20px;
+  }
+
+  .nav-btn a:last-child {
+    padding-inline: 22px;
+  }
 }
 
 /* Hero Section */
@@ -196,7 +226,7 @@
 }
 
 .hero-left-top .hero-btn,
-.hero-left-top > .tutor-btn {
+.hero-left-top>.tutor-btn {
   width: fit-content;
   display: inline-flex;
   align-items: center;
@@ -211,11 +241,11 @@
   cursor: pointer;
 }
 
-.hero-left-top > .tutor-btn {
+.hero-left-top>.tutor-btn {
   display: none;
 }
 
-.hero-left-top > .tutor-btn img {
+.hero-left-top>.tutor-btn img {
   width: 20px;
   height: 20px;
 }
@@ -290,7 +320,7 @@
   gap: 12px;
 }
 
-.slider-control .slider-pagination > .active {
+.slider-control .slider-pagination>.active {
   color: var(--txt-link);
   font-size: 20px;
 }
@@ -299,7 +329,7 @@
   display: none;
   flex: 1;
   position: relative;
-  height: 100vh;
+  height: 80vh;
 }
 
 /* Responsive Hero */
@@ -379,7 +409,7 @@
 .hero-img .revenue-stats {
   position: absolute;
   bottom: -40px;
-  left: -50px;
+  left: 0;
   background-color: var(--primary-light);
   padding: 25px 30px;
   border-radius: 20px;
@@ -394,7 +424,13 @@
   position: absolute;
   transform: rotate(-10deg);
   top: 40%;
-  left: -25%;
+  left: -5%;
+}
+
+@media (min-width: 75rem) {
+  .hero-img .revenue-stats {
+    left: -50px;
+  }
 }
 
 .revenue-stats .revenue-amount {
@@ -448,11 +484,13 @@
 }
 
 .commercial .commercial-card {
+  width: 100%;
+  max-width: 360px;
   background-color: var(--primary-light);
   padding: 50px 40px;
   border-radius: 20px;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
   border: 1px solid var(--light-border);
   display: flex;
   flex-direction: column;
@@ -496,7 +534,121 @@
   color: var(--primary-light);
 }
 
+@media (max-width: 47.999rem) {
+  .commercial {
+    padding: 3rem 0;
+  }
+
+  .commercial .commercial-ctn {
+    gap: 32px;
+  }
+
+  .commercial .commercial-title > .section-description {
+    width: 100%;
+  }
+
+  .commercial .commercial-card,
+  .commercial .commercial-card.active {
+    gap: 16px;
+    padding: 32px 24px;
+  }
+
+  .commercial .commercial-card > img {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 8px;
+  }
+
+  .commercial .commercial-card > .card-title {
+    font-size: 24px;
+  }
+
+  .commercial .commercial-card > .card-description {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
 @media (min-width: 48rem) {
+  .commercial {
+    padding: 4.5rem 0;
+  }
+
+  .commercial .commercial-title {
+    max-width: 70%;
+  }
+
+  .commercial .commercial-cards {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .commercial .commercial-card {
+    gap: 16px;
+    padding: 32px 18px;
+  }
+
+  .commercial .commercial-card.active {
+    padding: 32px 18px;
+  }
+
+  .commercial .commercial-card > img {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 8px;
+  }
+
+  .commercial .commercial-card > .card-title {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .commercial .commercial-card > .card-description {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+@media (min-width: 64rem) {
+  .commercial {
+    padding: 6rem 0;
+  }
+
+  .commercial .commercial-title {
+    max-width: 55%;
+  }
+
+  .commercial .commercial-cards {
+    gap: 30px;
+  }
+
+  .commercial .commercial-card {
+    gap: 18px;
+    padding: 40px 28px;
+  }
+
+  .commercial .commercial-card.active {
+    padding: 40px 28px;
+  }
+
+  .commercial .commercial-card > img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  .commercial .commercial-card > .card-title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .commercial .commercial-card > .card-description {
+    font-size: 17px;
+    line-height: 28px;
+  }
+}
+
+@media (min-width: 75rem) {
   .commercial {
     padding: 7.5rem 0;
   }
@@ -506,13 +658,32 @@
   }
 
   .commercial .commercial-cards {
-    flex-direction: row;
     gap: 45px;
   }
 
   .commercial .commercial-card {
-    width: 100%;
-    max-width: 360px;
+    gap: 20px;
+    padding: 50px 40px;
+  }
+
+  .commercial .commercial-card.active {
+    padding: 31px 40px 72px;
+  }
+
+  .commercial .commercial-card > img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 15px;
+  }
+
+  .commercial .commercial-card > .card-title {
+    font-size: 26px;
+    line-height: 28px;
+  }
+
+  .commercial .commercial-card > .card-description {
+    font-size: 18px;
+    line-height: 32px;
   }
 }
 
@@ -584,6 +755,11 @@
   padding: 15px 82px 12px 6px;
 }
 
+.rating-list>.active {
+  background-color: var(--primary-light);
+  box-shadow: var(--card-shadow);
+}
+
 .rating-item .item-info > .item-title {
   font-weight: 700;
   font-size: 24px;
@@ -610,7 +786,9 @@
 
   .rating-ctn .rating-left {
     width: 100%;
-    height: clamp(325px, calc(100vw + 15px), 440px);
+    height: auto;
+    max-height: 440px;
+    aspect-ratio: 330 / 390;
     margin-top: 1.5rem;
   }
 
@@ -696,12 +874,14 @@
   padding-inline: 15px;
 }
 
-@media (min-width: 64rem) {
-  .lg-container {
+@media (min-width: 75rem) {
+  .container {
     padding-inline: 0;
   }
+}
 
-  .container {
+@media (min-width: 85rem) {
+  .lg-container {
     padding-inline: 0;
   }
 }
