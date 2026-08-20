@@ -11,6 +11,8 @@
   --txt-pagination: #627193;
   --light-border: #f5f5f5;
   --description-gray: #899aa2;
+  --description-gray-dark: #655F73;
+  --description-gray-light: #8C8C8C;
   --accent-shadow: 0px 15px 30px -10px #ee2a5240;
   --secondary-shadow: 0px 16px 26px 0px #00000012;
   --card-shadow: 0px 0px 80px 0px #cbccbc40;
@@ -45,6 +47,13 @@
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/nunito.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Nunito-SemiBold.ttf") format("truetype");
 }
 
 @font-face {
