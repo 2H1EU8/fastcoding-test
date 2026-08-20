@@ -5,8 +5,10 @@
   --primary-light: #ffffff;
   --secondary-light: #f2f6f7;
   --primary-gray: #c4c4c4;
+  --placeholder-gray: #929292;
   --txt-gray: #9eabb2;
   --txt-link: #233638;
+  --txt-pagination: #627193;
   --accent-shadow: 0px 15px 30px -10px #ee2a5240;
   --secondary-shadow: 0px 16px 26px 0px #00000012;
   /* --lg-container: 1428px; */
@@ -19,6 +21,20 @@
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/poppins.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Poppins-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Poppins-Bold.ttf") format("truetype");
 }
 
 @font-face {
