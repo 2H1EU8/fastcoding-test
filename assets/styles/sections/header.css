@@ -1,0 +1,118 @@
+/* Header */
+.nav-ctn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 6px;
+  padding-bottom: 15px;
+}
+
+.nav-ctn .nav-links {
+  display: none;
+  gap: 45px;
+  align-items: center;
+  color: var(--txt-link);
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.nav-ctn .nav-links a {
+  white-space: nowrap;
+}
+
+.nav-ctn .logo {
+  width: 120px;
+  height: auto;
+}
+
+.nav-toggle {
+  display: block;
+  width: 44px;
+  height: 44px;
+  margin-right: -11px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 5px auto;
+  background-color: var(--txt-link);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.nav-toggle:focus-visible,
+.hero-btn:focus-visible,
+.nav-ctn a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (min-width: 64rem) {
+  .nav-ctn .nav-links {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+}
+
+.nav-ctn .nav-links a:hover {
+  color: var(--accent);
+  position: relative;
+}
+
+.nav-ctn .nav-links > a:hover::after {
+  content: "";
+  position: absolute;
+  width: 95%;
+  height: 1px;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--accent);
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  text-transform: capitalize;
+}
+
+.nav-btn a:last-child {
+  padding: 12px 28px;
+  background-color: var(--accent);
+  color: var(--primary-light);
+  border-radius: 10px;
+}
+
+.nav-btn a:last-child:hover {
+  background-color: var(--accent-hover);
+  color: var(--primary-light);
+}
+
+@media (min-width: 64rem) and (max-width: 84.999rem) {
+  .nav-ctn .nav-links {
+    gap: 24px;
+    font-size: 16px;
+  }
+
+  .nav-btn {
+    gap: 20px;
+  }
+
+  .nav-btn a:last-child {
+    padding-inline: 22px;
+  }
+}
+

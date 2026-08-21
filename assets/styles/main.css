@@ -1,7 +1,22 @@
 /* author: @2h1eu8  */
-@layer tokens, base, layout, components;
+@layer tokens, base, layout;
 
 @import url(./tokens.css) layer(tokens);
 @import url(./base.css) layer(base);
+
+@import url(./sections/info-header.css) layer(layout);
+@import url(./sections/header.css) layer(layout);
+@import url(./sections/hero.css) layer(layout);
+@import url(./sections/commercial.css) layer(layout);
+@import url(./sections/rating.css) layer(layout);
+@import url(./sections/services.css) layer(layout);
+@import url(./sections/sells.css) layer(layout);
+@import url(./sections/property.css) layer(layout);
+@import url(./sections/house-card.css) layer(layout);
+@import url(./sections/testimonial.css) layer(layout);
+@import url(./sections/subscribe.css) layer(layout);
+@import url(./sections/blog.css) layer(layout);
+@import url(./sections/contact.css) layer(layout);
+@import url(./sections/footer.css) layer(layout);
+
 @import url(./layout.css) layer(layout);
-@import url(./components.css) layer(components);

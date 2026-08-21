@@ -1,0 +1,237 @@
+/* Commercial */
+.commercial {
+  padding: 2rem 0;
+}
+
+.commercial .commercial-ctn {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.commercial .commercial-title {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 10px;
+  text-align: center;
+}
+
+.commercial .commercial-title > .section-description {
+  width: 82%;
+  margin: 0 auto;
+}
+
+.commercial .commercial-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.commercial .commercial-card {
+  width: 100%;
+  max-width: 360px;
+  background-color: var(--primary-light);
+  padding: 50px 40px;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border: 1px solid var(--light-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-shadow: var(--card-shadow);
+}
+
+.commercial .commercial-card > img {
+  margin-bottom: 15px;
+}
+
+.commercial .commercial-card:hover {
+  transform: translateY(-10px);
+}
+
+.commercial .commercial-card > .card-title {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 28px;
+  letter-spacing: -0.5%;
+  text-align: center;
+}
+
+.commercial .commercial-card > .card-description {
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: -1%;
+  color: var(--description-gray);
+}
+
+.commercial .commercial-card.active {
+  background-color: var(--accent);
+  color: var(--primary-light);
+  border-color: var(--accent);
+  padding-top: 31px;
+  padding-bottom: 72px;
+}
+
+.commercial .commercial-card.active > .card-description {
+  color: var(--primary-light);
+}
+
+@media (max-width: 47.999rem) {
+  .commercial {
+    padding: 3rem 0;
+  }
+
+  .commercial .commercial-ctn {
+    gap: 32px;
+  }
+
+  .commercial .commercial-title > .section-description {
+    width: 100%;
+  }
+
+  .commercial .commercial-card,
+  .commercial .commercial-card.active {
+    gap: 16px;
+    padding: 32px 24px;
+  }
+
+  .commercial .commercial-card > img {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 8px;
+  }
+
+  .commercial .commercial-card > .card-title {
+    font-size: 24px;
+  }
+
+  .commercial .commercial-card > .card-description {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+@media (min-width: 48rem) {
+  .commercial {
+    padding: 4.5rem 0;
+  }
+
+  .commercial .commercial-title {
+    max-width: 70%;
+  }
+
+  .commercial .commercial-cards {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .commercial .commercial-card {
+    gap: 16px;
+    padding: 32px 18px;
+  }
+
+  .commercial .commercial-card.active {
+    padding: 32px 18px;
+  }
+
+  .commercial .commercial-card > img {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 8px;
+  }
+
+  .commercial .commercial-card > .card-title {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .commercial .commercial-card > .card-description {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+@media (min-width: 64rem) {
+  .commercial {
+    padding: 6rem 0;
+  }
+
+  .commercial .commercial-title {
+    max-width: 55%;
+  }
+
+  .commercial .commercial-cards {
+    gap: 30px;
+  }
+
+  .commercial .commercial-card {
+    gap: 18px;
+    padding: 40px 28px;
+  }
+
+  .commercial .commercial-card.active {
+    padding: 40px 28px;
+  }
+
+  .commercial .commercial-card > img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  .commercial .commercial-card > .card-title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .commercial .commercial-card > .card-description {
+    font-size: 17px;
+    line-height: 28px;
+  }
+}
+
+@media (min-width: 75rem) {
+  .commercial {
+    padding: 7.5rem 0;
+  }
+
+  .commercial .commercial-title {
+    max-width: 45%;
+  }
+
+  .commercial .commercial-cards {
+    gap: 45px;
+  }
+
+  .commercial .commercial-card {
+    gap: 20px;
+    padding: 50px 40px;
+  }
+
+  .commercial .commercial-card.active {
+    padding: 31px 40px 72px;
+  }
+
+  .commercial .commercial-card > img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 15px;
+  }
+
+  .commercial .commercial-card > .card-title {
+    font-size: 26px;
+    line-height: 28px;
+  }
+
+  .commercial .commercial-card > .card-description {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
