@@ -1645,6 +1645,7 @@
 
 .testimonial-slider > .slider-control {
   box-shadow: 0px 30px 35px -8px #FAB33F26;
+  border-radius: 50%;
   transition: transform 0.3s ease;
   cursor: pointer;
 }
