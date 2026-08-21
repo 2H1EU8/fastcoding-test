@@ -1594,7 +1594,7 @@
 
   .house-card-meta-item > span {
     font-size: 12px;
-  } 
+  }
 
   .unit {
     width: 88px;
@@ -1842,6 +1842,180 @@
   .customer-review > .customer-info > .customer-position {
     font-size: 14px;
     line-height: 20px;
+  }
+}
+
+/* Subscribe Section */
+.subscribe {
+  padding: 5.25rem 0;
+  background-color: var(--primary-light);
+}
+
+.subscribe-ctn {
+  display: flex;
+  flex-direction: column;
+}
+
+.subscribe-ctn .subscribe-title {
+  text-align: center;
+  text-transform: none;
+  max-width: 70%;
+  margin: 0 auto 3.25rem;
+}
+
+.subscribe-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 34px;
+}
+
+.subscribe-cards .subscribe-card {
+  background-color: var(--placeholder-gray);
+  padding: 32px 56px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  transition: transform 0.3s ease;
+}
+
+.subscribe-cards .subscribe-card:hover {
+  transform: translateY(-10px);
+}
+
+.subscribe-cards .subscribe-card>h4 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -1.5%;
+  color: var(--primary-light);
+}
+
+.subscribe-cards .subscribe-card>.see-more-btn {
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: -1%;
+  color: var(--accent);
+  box-shadow: 0px 15px 30px -10px #EE2A5240;
+  display: flex;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--primary-light);
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.subscribe-card>.see-more-btn>img {
+  margin-top: 2px;
+  width: 12px;
+  height: 12px;
+}
+
+ .subscribe-form {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 610px;
+  padding: 12px 12px 12px 30px;
+  background-color: var(--light-border);
+  margin-top: 67px;
+  border-radius: 15px;
+}
+
+.subscribe-form >input {
+  flex: 1;
+  border: none;
+  background-color: transparent;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  letter-spacing: -1%;
+  color: var(--description-gray-light)
+}
+
+.subscribe-form>.subscribe-button {
+  border: none;
+  background-color: var(--accent);
+  color: var(--primary-light);
+  padding: 13px 26px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -1%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Responsive Subscribe - Mobile */
+@media (max-width: 47.999rem) {
+  .subscribe {
+    padding: 48px 0;
+  }
+
+  .subscribe-ctn .subscribe-title {
+    margin-bottom: 28px;
+  }
+
+  .subscribe-cards {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .subscribe-cards .subscribe-card {
+    padding: 24px 20px;
+    gap: 16px;
+  }
+
+  .subscribe-cards .subscribe-card > h4 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .subscribe-cards .subscribe-card > .see-more-btn {
+    min-height: 44px;
+    padding: 11px 24px;
+    touch-action: manipulation;
+  }
+
+  .subscribe-card > .see-more-btn > img {
+    width: 10px;
+    height: 10px;
+  }
+
+  .subscribe-form {
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 32px;
+    padding: 10px;
+    border-radius: 12px;
+  }
+
+  .subscribe-form > .icon {
+    flex: 0 0 20px;
+  }
+
+  .subscribe-form > .icon > img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .subscribe-form > input {
+    min-width: 0;
+    font-size: 16px;
+  }
+
+  .subscribe-form > .subscribe-button {
+    flex: 0 0 100%;
+    min-height: 44px;
+    padding: 10px 20px;
+    font-size: 16px;
+    touch-action: manipulation;
   }
 }
 
