@@ -1237,6 +1237,22 @@
   align-items: end;
 }
 
+.property-ctn .property-button {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 20px 24px 18px;
+  background-color: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.property-ctn .property-button:hover {
+  background-color: var(--accent);
+  color: var(--primary-light);
+}
+
 .property-top .property-title {
   max-width: 35%;
   display: flex;
