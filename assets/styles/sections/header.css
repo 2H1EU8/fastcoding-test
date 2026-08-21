@@ -1,4 +1,12 @@
 /* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--primary-light);
+  box-shadow: 0 6px 20px rgb(7 28 31 / 6%);
+}
+
 .nav-ctn {
   display: flex;
   justify-content: space-between;
@@ -115,4 +123,3 @@
     padding-inline: 22px;
   }
 }
-
