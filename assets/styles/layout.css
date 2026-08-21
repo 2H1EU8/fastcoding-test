@@ -2271,6 +2271,389 @@
   }
 }
 
+/* Contact Section */
+.contact {
+  background-color: var(--primary-light);
+}
+
+.contact-heading {
+  text-align: center;
+}
+
+.contact-eyebrow {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 2px;
+  color: var(--accent);
+}
+
+.contact-title {
+  margin-top: 14px;
+  font-family: "Nunito", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: -0.06px;
+  color: #1f242e;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 576px 497px;
+  gap: 95px;
+  margin-top: 60px;
+}
+
+.contact-intro {
+  position: relative;
+  min-height: 649px;
+}
+
+.contact-description {
+  max-width: 393px;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--description-gray-light);
+}
+
+.contact-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 35px;
+  list-style: none;
+}
+
+.contact-benefits > li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  min-height: 30px;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #242424;
+}
+
+.contact-benefits > li > span {
+  flex: 0 0 16px;
+  width: 16px;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--accent);
+}
+
+.contact-art {
+  position: absolute;
+  top: 234px;
+  left: 0;
+  width: 576px;
+  height: 349px;
+}
+
+.contact-art-block,
+.contact-art-accent,
+.contact-art-detail {
+  position: absolute;
+  border-radius: 8px;
+}
+
+.contact-art-block {
+  background-color: var(--primary-gray);
+}
+
+.contact-art-block-top {
+  top: 47px;
+  left: 4px;
+  width: 278px;
+  height: 203px;
+}
+
+.contact-art-block-bottom {
+  top: 111px;
+  left: 143px;
+  width: 432px;
+  height: 238px;
+}
+
+.contact-art-accent {
+  top: 11px;
+  left: 318px;
+  width: 73px;
+  height: 70px;
+  background-color: var(--accent);
+}
+
+.contact-art-detail {
+  top: 0;
+  left: 367px;
+  width: 34px;
+  height: 32px;
+  background-color: #242424;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 497px;
+  min-height: 649px;
+  padding: 40px 40px 38px;
+  border-radius: 8px;
+  background-color: var(--secondary-light);
+}
+
+.contact-form > h3 {
+  font-family: "Nunito", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+  color: #242424;
+}
+
+.contact-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 39px;
+}
+
+.contact-field + .contact-field {
+  margin-top: 24px;
+}
+
+.contact-field > label {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #666666;
+}
+
+.contact-field > input,
+.contact-field > textarea {
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background-color: var(--primary-light);
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #242424;
+  outline: none;
+}
+
+.contact-field > input {
+  height: 56px;
+  padding: 16px;
+}
+
+.contact-field > textarea {
+  height: 119px;
+  padding: 16px;
+  resize: vertical;
+}
+
+.contact-field > input::placeholder,
+.contact-field > textarea::placeholder {
+  color: #999999;
+  opacity: 1;
+}
+
+.contact-field > input:focus,
+.contact-field > textarea:focus {
+  border-color: var(--accent);
+}
+
+.contact-submit {
+  align-self: flex-start;
+  min-width: 129px;
+  min-height: 53px;
+  margin-top: 40px;
+  padding: 16px 32px;
+  border: 0;
+  border-radius: 8px;
+  background-color: var(--accent);
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  color: var(--primary-light);
+  cursor: pointer;
+}
+
+.contact-submit:hover {
+  background-color: var(--accent-hover);
+}
+
+.contact-submit:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Responsive Contact - Tablet */
+@media (min-width: 48rem) and (max-width: 74.999rem) {
+  .contact {
+    padding: 64px 0;
+  }
+
+  .contact-title {
+    font-size: 42px;
+    line-height: 54px;
+  }
+
+  .contact-layout {
+    grid-template-columns: minmax(0, 576px);
+    justify-content: center;
+    gap: 48px;
+    margin-top: 48px;
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 497px;
+    min-height: 0;
+    justify-self: center;
+  }
+}
+
+/* Responsive Contact - Mobile */
+@media (max-width: 47.999rem) {
+  .contact {
+    padding: 48px 0;
+  }
+
+  .contact-eyebrow {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 1.5px;
+  }
+
+  .contact-title {
+    margin-top: 10px;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0;
+  }
+
+  .contact-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    margin-top: 32px;
+  }
+
+  .contact-intro {
+    width: 100%;
+    max-width: 576px;
+    min-height: 0;
+    justify-self: center;
+  }
+
+  .contact-description {
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .contact-benefits {
+    gap: 6px;
+    margin-top: 24px;
+  }
+
+  .contact-benefits > li {
+    gap: 8px;
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .contact-benefits > li > span {
+    line-height: 24px;
+  }
+
+  .contact-art {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    max-width: 576px;
+    height: 242px;
+    margin-top: 28px;
+    margin-inline: auto;
+  }
+
+  .contact-art-block-top {
+    top: 33px;
+    left: 0;
+    width: 48%;
+    height: 141px;
+  }
+
+  .contact-art-block-bottom {
+    top: 78px;
+    right: 0;
+    left: auto;
+    width: 75%;
+    height: 164px;
+  }
+
+  .contact-art-accent {
+    top: 8px;
+    left: 55%;
+    width: 51px;
+    height: 49px;
+  }
+
+  .contact-art-detail {
+    top: 0;
+    left: 65%;
+    width: 24px;
+    height: 22px;
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 497px;
+    min-height: 0;
+    padding: 28px 20px;
+    justify-self: center;
+  }
+
+  .contact-form > h3 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .contact-field {
+    margin-top: 28px;
+  }
+
+  .contact-field + .contact-field {
+    margin-top: 20px;
+  }
+
+  .contact-field > input {
+    height: 52px;
+    padding: 14px;
+  }
+
+  .contact-field > textarea {
+    height: 112px;
+    padding: 14px;
+  }
+
+  .contact-submit {
+    min-width: 120px;
+    min-height: 48px;
+    margin-top: 28px;
+    padding: 13px 28px;
+  }
+}
+
 /* Utilities */
 .lg-container {
   max-width: var(--lg-container);
